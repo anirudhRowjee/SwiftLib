@@ -26,7 +26,8 @@ def connect(a):
         conn.close()
 
 
-#
+#   Defining library class. Will perform authentication and allow the user to continue,
+#   else will exit when wrong password is provided
 
 
 class Library:
@@ -40,6 +41,8 @@ class Library:
         else:
             print("Unauthorized user")
             exit()
+
+# create subclass / inherited class Book, which will have allow creation/deletion of books
 
 class Book(Library):
 
