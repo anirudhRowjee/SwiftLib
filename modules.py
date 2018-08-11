@@ -51,14 +51,15 @@ class Library:
 
 # create subclass / inherited class Book, which will have allow creation/deletion of books
 
-
 class Book(Library):
 
     def __init__(self):
-        o = int(input("Enter 1 to create, 2 to remove"))
+        o = int(input("Enter 1 to create, 2 to remove, 3 to show all books"))
         if o == 1:
-            print("Book created")
+
         if o == 2:
             print("Book Deleted")
+        if o == 3:
+            print("Show all books")
 
 
