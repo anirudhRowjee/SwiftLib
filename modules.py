@@ -32,17 +32,25 @@ def connect(a):
 
 class Library:
 
+    auth = False
+
     def __init__(self):
         pwd = read_pwd()
         password = input("Please enter the password >>> ")
         if password == pwd['pwd']:
             print("welcome admin")
-            connect(1)
+            self.auth = True
         else:
             print("Unauthorized user")
+            self.auth = False
             exit()
 
+    def auth_status(self):
+        return self.auth
+
+
 # create subclass / inherited class Book, which will have allow creation/deletion of books
+
 
 class Book(Library):
 
