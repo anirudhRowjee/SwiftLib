@@ -21,9 +21,8 @@ def connect(a):
     except Error as e:
         print(e)
 
-    if a == 0:
-        print('closing connection')
-        conn.close()
+    # print('closing connection')
+    # conn.close()
 
 
 #   Defining library class. Will perform authentication and allow the user to continue,
@@ -35,11 +34,16 @@ class Library:
     auth = False
 
     def __init__(self):
+
         pwd = read_pwd()
         password = input("Please enter the password >>> ")
+
         if password == pwd['pwd']:
+            connect(1)
             print("welcome admin")
             self.auth = True
+
+
         else:
             print("Unauthorized user")
             self.auth = False
@@ -49,17 +53,14 @@ class Library:
         return self.auth
 
 
-# create subclass / inherited class Book, which will have allow creation/deletion of books
+# create subclass / inherited class Book, which will have allow creation/deletion/query/search-sort-display of books
 
 class Book(Library):
 
     def __init__(self):
-        o = int(input("Enter 1 to create, 2 to remove, 3 to show all books"))
-        if o == 1:
 
-        if o == 2:
-            print("Book Deleted")
-        if o == 3:
-            print("Show all books")
+
+
+
 
 

@@ -6,7 +6,7 @@ print("welcome to SwiftLib v1.0")
 lib = libmaster.Library()
 a = lib.auth_status()
 
-b = libmaster.Book()
+#b = libmaster.Book()
 
 
 
